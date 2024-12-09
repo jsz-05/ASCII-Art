@@ -20,7 +20,12 @@ std::vector<std::string> convertToASCII(const std::vector<std::vector<int>> &ima
         for (int x = 0; x < width; ++x) {
             int pixel = image[y][x]; 
             // Pixel assumed 0 to 255
-            int index = (pixel * (int)GRADIENT.size()) / 256;
+            // int index = (pixel * (int)GRADIENT.size()) / 256;
+
+            // Invert the grayscale before indexing:
+            int invertedPixel = 255 - pixel;
+            int index = (invertedPixel * (int)GRADIENT.size()) / 256;
+            
             if (index >= (int)GRADIENT.size()) index = (int)GRADIENT.size() - 1;
             line.push_back(GRADIENT[index]);
         }
