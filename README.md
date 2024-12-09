@@ -5,7 +5,7 @@ This project takes a BMP image and converts it into ASCII art. Dark areas of the
 
 If you view the ASCII output file on a white background with dark colored text, comment out the greyscale inversion in `ascii_converter.cpp`
 
-
+![demo](.demo/demo.png)
 
 **How It Works:**  
 1. The program reads a BMP image file.  
@@ -23,3 +23,5 @@ If you view the ASCII output file on a white background with dark colored text, 
    ./ascii_art ./image-input/car.bmp > ./ascii-output/car.txt
    ```  
 3. The ASCII art will be saved to the txt file.
+
+**Fun Fact:** This project was originally created for my CIS127 final back in high school.
